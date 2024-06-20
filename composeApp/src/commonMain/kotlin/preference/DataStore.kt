@@ -3,6 +3,7 @@ package preference
 import androidx.datastore.core.DataStore
 import androidx.datastore.core.DataStoreFactory
 import androidx.datastore.core.okio.OkioStorage
+import com.areeb.proto_datastore_kmm.PreferenceData
 import okio.FileSystem
 import okio.Path
 

@@ -1,6 +1,7 @@
 package preference
 
 import androidx.datastore.core.DataStore
+import com.areeb.proto_datastore_kmm.PreferenceData
 import com.areeb.protodatastorekmm.AndroidPlatformContextProvider
 import okio.FileSystem
 import okio.Path.Companion.toPath

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package com.areeb.proto_datastore_kmm;
+
+message PreferenceData {
+  int32 counter = 1;
+}
