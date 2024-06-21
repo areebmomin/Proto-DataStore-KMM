@@ -1,11 +1,10 @@
 package preference
 
-import androidx.datastore.core.CorruptionException
 import androidx.datastore.core.okio.OkioSerializer
 import com.areeb.proto_datastore_kmm.PreferenceData
-import kotlinx.serialization.SerializationException
 import okio.BufferedSink
 import okio.BufferedSource
+import okio.IOException
 
 object PreferenceSerializer : OkioSerializer<PreferenceData> {
     override val defaultValue: PreferenceData
@@ -14,8 +13,8 @@ object PreferenceSerializer : OkioSerializer<PreferenceData> {
     override suspend fun readFrom(source: BufferedSource): PreferenceData {
         try {
             return PreferenceData.ADAPTER.decode(source)
-        } catch (serialization: SerializationException) {
-            throw CorruptionException("Unable to read UserPrefs", serialization)
+        } catch (exception: IOException) {
+            throw Exception(exception.message ?: "Serialization Exception")
         }
     }
 
