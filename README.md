@@ -1,14 +1,13 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Proto DataStore in KMM
+A POC to demonstrate <a href="https://developer.android.com/topic/libraries/architecture/datastore" target="_blank">Proto DataStore</a> Implementation in KMM
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+### Medium Article:
+<a href="https://medium.com/@aribmomin111/unlocking-proto-datastore-magic-in-kmm-d397f40a0805" target="_blank">Unlocking Proto DataStore Magic in KMM</a>
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+<b /><b />
 
+### Screenshots:
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+![Android](https://github.com/areebmomin/Proto-DataStore-KMM/blob/main/assets/Android%20Result.gif)
+
+![iOS](https://github.com/areebmomin/Proto-DataStore-KMM/blob/main/assets/iPhone%20Result.gif)
