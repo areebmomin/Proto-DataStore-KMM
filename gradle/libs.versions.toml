@@ -15,6 +15,7 @@ junit = "4.13.2"
 kotlin = "2.0.0"
 datastore = "1.1.1"
 wire = "5.0.0-alpha03"
+junitKtx = "1.2.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -28,6 +29,7 @@ androidx-material = { group = "com.google.android.material", name = "material", 
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 datastore = { module = "androidx.datastore:datastore-core-okio", version.ref = "datastore" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

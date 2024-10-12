@@ -10,6 +10,8 @@ plugins {
 }
 
 kotlin {
+    tasks.create("testClasses")
+
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
@@ -33,6 +35,8 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.junit.ktx)
+            implementation(libs.androidx.espresso.core)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -67,6 +71,7 @@ android {
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     packaging {
         resources {
