@@ -35,8 +35,6 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            implementation(libs.androidx.junit.ktx)
-            implementation(libs.androidx.espresso.core)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -48,6 +46,11 @@ kotlin {
             implementation(libs.datastore)
         }
     }
+}
+
+dependencies {
+    androidTestImplementation(libs.androidx.junit.ktx)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
 
 wire {
